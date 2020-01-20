@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
+
+    <div class="score-board">
+        <div id="player1-label" class="badge" onclick="playerSelect(event, 0)">Player 1</div>
+        <div id="player2-label" class="badge" onclick="playerSelect(event, 1)">Player 2</div>
+        <span id="player1-score">0</span>:<span id="player2-score">0</span>
+    </div>
+
+    <div class="result">
+        <p>Begin game below! You can select who goes first above.</p>
+    </div>
+
+    <table class="board">
+        <tr>
+            <td id="top-left" onclick="fillTile(event, 0)"></td>
+            <td id="top-mid" class="vert" onclick="fillTile(event, 1)"></td>
+            <td id="top-right" onclick="fillTile(event, 2)"></td>
+        </tr>
+        <tr>
+            <td id="mid-left" class="horiz" onclick="fillTile(event, 3)"></td>
+            <td id="mid-mid" class="horiz vert" onclick="fillTile(event, 4)"></td>
+            <td id="mid-right" class="horiz" onclick="fillTile(event, 5)"></td>
+        </tr>
+        <tr>
+            <td id="bot-left" onclick="fillTile(event, 6)"></td>
+            <td id="bot-mid" class="vert" onclick="fillTile(event, 7)"></td>
+            <td id="bot-right" onclick="fillTile(event, 8)"></td>
+        </tr>
+    </table>
+    <div class = "end">
+        <p hidden="true">Click the board for a new game!</p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
